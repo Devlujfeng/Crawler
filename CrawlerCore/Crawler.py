@@ -20,6 +20,7 @@ client = APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK
 url = client.get_authorize_url()
 
 webbrowser.open_new(url)
+
 r = requests.get(url)
 print(r.url)
   
